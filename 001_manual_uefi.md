@@ -74,11 +74,15 @@ sudo mkfs.fat -F 32 /dev/sde1
 ([1](https://forum.manjaro.org/t/the-iso-files-have-not-been-made-compatible-with-iso-file-copy-mode/77394),
 [2](https://github.com/pbatard/rufus/wiki/FAQ#GRUB)).
 
-2\. Извлекаем содержимое iso в папку result:
+2\. Монтируем iso от обычного пользователя:
 
 ```
-7z x linuxmint-20.3-cinnamon-64bit.iso -oresult
+udisksctl loop-setup -r -f linuxmint-21.3-cinnamon-64bit.iso
 ```
+
+[Тут](https://wiki.archlinux.org/title/udisks) подробнее об использовании udisks.
+
+Не используйте для распаковки архиваторы вроде 7z, так как на iso могут быть символические ссылки.
 
 3\. Монтируем флешку от обычного пользователя:
 
