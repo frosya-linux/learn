@@ -90,7 +90,7 @@ udisksctl loop-setup -r -f linuxmint-21.3-cinnamon-64bit.iso
 udisksctl mount -b /dev/sde1
 ```
 
-4\. Копируем файлы из папки result на флешку
+4\. Копируем файлы из iso на флешку
 
 Теперь с неё можно загружаться!
 
